@@ -10,7 +10,7 @@ static float temp=0;
 
 void tpmInitialize(){
 
-	SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK | SIM_SCGC5_PORTE_MASK;	// enable clock for Port D & E
+	SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK | SIM_SCGC5_PORTE_MASK | SIM_SCGC5_PORTA_MASK;	// enable clock for Port D & E
 	SIM->SCGC6 |= SIM_SCGC6_TPM0_MASK;	// enable clock for TPM
 	
 	PORTE->PCR[22] |= PORT_PCR_MUX(3);	// fototranzystor
@@ -18,6 +18,8 @@ void tpmInitialize(){
 	//PORTE->PCR[29] |=  PORT_PCR_ISF_MASK | PORT_PCR_MUX(3) | PORT_PCR_DSE_MASK;	
 	PORTD->PCR[5] |= PORT_PCR_ISF_MASK | PORT_PCR_MUX(4) | PORT_PCR_DSE_MASK;	// led czerowny
 	
+	PORTA->PCR[6] |= PORT_PCR_MUX(3);
+	PORTA->PCR[7] |= PORT_PCR_MUX(3);
 
 	
 	SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK;     
@@ -28,10 +30,10 @@ void tpmInitialize(){
 	
 	TPM0->MOD = 4095;	
 	
-	TPM0->CONTROLS[2].CnSC |= TPM_CnSC_MSB_MASK |TPM_CnSC_ELSA_MASK; 			
+	TPM0->CONTROLS[3].CnSC |= TPM_CnSC_MSB_MASK |TPM_CnSC_ELSA_MASK; 			
 	TPM0->CONTROLS[4].CnSC |= TPM_CnSC_MSB_MASK |TPM_CnSC_ELSB_MASK; 			
 
-	TPM0->CONTROLS[2].CnV = 4000; 
+	TPM0->CONTROLS[3].CnV = 4000; 
 	TPM0->CONTROLS[4].CnV = 4000; 
 	
 	TPM0->SC |= TPM_SC_CMOD(1);		
@@ -73,7 +75,7 @@ void TPM0_IRQHandler()
       /* Wait for the conversion to finish */
       while(!((ADC0->SC1[0]) & ADC_SC1_COCO_MASK));
    			
-			TPM0->CONTROLS[2].CnV= value;
+			TPM0->CONTROLS[3].CnV= value;
 			TPM0->CONTROLS[4].CnV = value;
 				
 				

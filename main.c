@@ -2,6 +2,8 @@
 #include "adc.h"
 #include "slcd.h"
 #include "tpm.h"
+#include "uart0.h"
+#include "leds.h"
 
 
 int main (void) {

@@ -1,10 +1,15 @@
-#ifndef uart0_h
-#define uart0_h
+#ifndef UART0_H
+#define UART0_H
 
-#include "MKL46Z4.h"   /* Device header */
+#include "MKL46Z4.h"
+#include "string.h"
 
-void ini_uart0(void);
-void SendString(char tablica[]);
-uint8_t GetValue(void);
+#define Boud_Rate 9600
+#define ModuleClock 8000000
+
+void UART0_init(void);
+void UART0_transmitter(uint8_t data);
+uint8_t UART0_reciver(void);
+void send_String(char tablica[]);
 
 #endif

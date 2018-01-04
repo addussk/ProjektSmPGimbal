@@ -7,7 +7,7 @@ void adcInitialize() {
 	
 	
 SIM->SCGC6 |= SIM_SCGC6_ADC0_MASK;		//  Clock
-	
+ 	
 ADC0->CFG1 |= ADC_CFG1_ADICLK(1)  | ADC_CFG1_ADIV(1) | ADC_CFG1_ADLSMP_MASK;     
 																																									
 	

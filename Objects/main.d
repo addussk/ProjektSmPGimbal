@@ -9,3 +9,7 @@
 .\objects\main.o: adc.h
 .\objects\main.o: slcd.h
 .\objects\main.o: tpm.h
+.\objects\main.o: uart0.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: leds.h
+.\objects\main.o: extra.h
