@@ -415,21 +415,6 @@
               <FileType>5</FileType>
               <FilePath>.\slcd.h</FilePath>
             </File>
-            <File>
-              <FileName>uart0.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uart0.c</FilePath>
-            </File>
-            <File>
-              <FileName>leds.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\leds.c</FilePath>
-            </File>
-            <File>
-              <FileName>extra.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\extra.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

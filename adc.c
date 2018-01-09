@@ -7,25 +7,20 @@ void adcInitialize() {
 	
 	
 SIM->SCGC6 |= SIM_SCGC6_ADC0_MASK;		//  Clock
- 	
+	
 ADC0->CFG1 |= ADC_CFG1_ADICLK(1)  | ADC_CFG1_ADIV(1) | ADC_CFG1_ADLSMP_MASK;     
 																																									
-	
 ADC0->CFG2 |= ADC_CFG2_ADHSC_MASK | ADC_CFG2_ADLSTS(0);														
 																																										
 ADC0->SC2 |= ADC_SC2_REFSEL_MASK;																									
 	
 ADC0->SC3 |= ADC_SC3_AVGS(3)  | ADC_SC3_AVGE_MASK;																
 																																										
-	
 adcCalibrate();
 	
 ADC0->CFG1 |= ADC_CFG1_MODE(1);																								
 	
 ADC0->SC1[0] |= ADC_SC1_AIEN_MASK;	 																									
-	
-	
-	
 }
 
 uint16_t adcCalibrate(){

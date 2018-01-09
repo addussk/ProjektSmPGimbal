@@ -2,8 +2,6 @@
 #include "adc.h"
 #include "slcd.h"
 #include "tpm.h"
-#include "uart0.h"
-#include "leds.h"
 
 
 int main (void) {
@@ -12,10 +10,6 @@ int main (void) {
 	tpmInitialize();
 	adcInitialize();
 
-	
-	
-	
-	
 	while(1){	
 	}
 }

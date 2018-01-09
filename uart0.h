@@ -4,7 +4,7 @@
 #include "MKL46Z4.h"
 #include "string.h"
 
-#define Boud_Rate 9600
+#define Boud_Rate 4800
 #define ModuleClock 8000000
 
 void UART0_init(void);
