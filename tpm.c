@@ -67,7 +67,7 @@ void TPM0_IRQHandler()
    			
 				TPM0->CONTROLS[2].CnV= value;
 				TPM0->CONTROLS[3].CnV = value;
-				TPM0->CONTROLS[4].CnV = 4000-value;				
+				TPM0->CONTROLS[4].CnV = 4060-value;				
 				
 	TPM0->STATUS &= ~TPM_STATUS_CH0F_MASK;		//reset flag
 }
