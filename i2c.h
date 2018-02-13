@@ -1,21 +1,32 @@
 #ifndef i2c_h
 #define i2c_h
 
-#include "MKL46Z4.h"   /* Device header */
+#include "MKL46Z4.h"
 
-void WaitI2C(uint32_t value);
-void InitializationI2C(void);
-void EnableI2C(void);
-void DisableI2C(void);
-void SendRestartI2C(void);
-void MasterModeI2C(void);
-void SlaveModeI2C(void);
-void TransmitModeI2C(void);
-void ReceiveModeI2C(void);
-void DisableAckI2C(void);
-uint8_t ReadByteI2C(void);
-void ClearInteruptI2C(void);
-uint8_t ReadRegisterI2C(uint8_t reg,uint8_t adress1,uint8_t adress2);
-void WriteRegisterI2C(uint8_t reg, uint8_t data,uint8_t adress);
+
+
+
+
+
+typedef enum{
+  I2C_ACK = 0,
+  I2C_NACK = 1,
+} I2C_Acknowledge_Bit;
+
+void		I2C_Init(I2C_Type* i2c);
+void    I2C_Disable(I2C_Type* i2c);
+void    I2C_DisableInt(I2C_Type* i2c);
+void    I2C_Enable(I2C_Type* i2c);
+void    I2C_EnableInt(I2C_Type* i2c);
+uint8_t I2C_ReadByte(I2C_Type* i2c, uint8_t ack);
+void    I2C_Restart(I2C_Type* i2c);
+void    I2C_Start(I2C_Type* i2c);
+void    I2C_Stop(I2C_Type* i2c);
+void    I2C_WriteByte(I2C_Type* i2c, uint8_t data);
+void sendACK(I2C_Type* i2c); 
+void sendNACK(I2C_Type* i2c);
+
+
+
 
 #endif

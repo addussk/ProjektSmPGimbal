@@ -7,6 +7,7 @@
 .\objects\tpm.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.1\CMSIS\Include\cmsis_armcc.h
 .\objects\tpm.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.13.0\Device\Include\system_MKL46Z4.h
 .\objects\tpm.o: tpm.h
-.\objects\tpm.o: adc.h
 .\objects\tpm.o: slcd.h
 .\objects\tpm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\tpm.o: i2c.h
+.\objects\tpm.o: mpu.h

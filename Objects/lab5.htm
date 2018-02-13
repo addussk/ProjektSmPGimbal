@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\lab5.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\lab5.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Jan 10 13:05:33 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Feb 13 22:33:04 2018
 <BR><P>
 <H3>Maximum Stack Usage =         72 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -75,8 +75,8 @@ Function Pointers
 Global Symbols
 </H3>
 <P><STRONG><a name="[2e]"></a>__main</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, __main.o(!!!main))
-<BR><BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
-<LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<BR><BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
 <P><STRONG><a name="[31]"></a>__scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter))
@@ -164,8 +164,8 @@ Global Symbols
 <P><STRONG><a name="[77]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[32]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
-<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<BR><BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
 <P><STRONG><a name="[78]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
@@ -193,7 +193,7 @@ Global Symbols
 
 <P><STRONG><a name="[7a]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
-<P><STRONG><a name="[45]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
+<P><STRONG><a name="[42]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
@@ -353,10 +353,10 @@ Global Symbols
 
 <P><STRONG><a name="[7e]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[50]"></a>__aeabi_idivmod</STRONG> (Thumb, 326 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
+<P><STRONG><a name="[54]"></a>__aeabi_idivmod</STRONG> (Thumb, 326 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDisplay
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDisplay
 </UL>
 
 <P><STRONG><a name="[7f]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
@@ -365,36 +365,11 @@ Global Symbols
 
 <P><STRONG><a name="[81]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[4a]"></a>__aeabi_f2uiz</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, ffixui.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TPM0_IRQHandler
-</UL>
-
-<P><STRONG><a name="[82]"></a>_ffixu</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, ffixui.o(.text), UNUSED)
-
-<P><STRONG><a name="[41]"></a>__aeabi_i2f_normalise</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, fflti.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
-</UL>
-
-<P><STRONG><a name="[40]"></a>__aeabi_i2f</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fflti.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f_normalise
-</UL>
-
-<P><STRONG><a name="[83]"></a>_fflt</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflti.o(.text), UNUSED)
-
-<P><STRONG><a name="[42]"></a>__aeabi_ui2f</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, fflti.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f_normalise
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TPM0_IRQHandler
-</UL>
-
-<P><STRONG><a name="[84]"></a>_ffltu</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflti.o(.text), UNUSED)
-
 <P><STRONG><a name="[36]"></a>__user_setup_stackheap</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = __user_setup_stackheap
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_perproc_libspace
+<BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_perproc_libspace
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_initial_stackheap
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_sh
@@ -404,167 +379,196 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = exit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_call_atexit_fns (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_call_atexit_fns (Weak Reference)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[85]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[82]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
-<P><STRONG><a name="[43]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
+<P><STRONG><a name="[40]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[86]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[83]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[3f]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[87]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[84]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[88]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[85]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[89]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
-
-<P><STRONG><a name="[3a]"></a>main</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = main &rArr; tpmInitialize &rArr; __NVIC_SetPriority
+<P><STRONG><a name="[53]"></a>I2C_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, i2c.o(i.I2C_Disable))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRegister
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tpmInitialize
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdInitialize
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcInitialize
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_init
+
+<P><STRONG><a name="[86]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[4b]"></a>I2C_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, i2c.o(i.I2C_Enable))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
+
+<P><STRONG><a name="[49]"></a>I2C_Init</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, i2c.o(i.I2C_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[50]"></a>I2C_ReadByte</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, i2c.o(i.I2C_ReadByte))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+</UL>
+
+<P><STRONG><a name="[4e]"></a>I2C_Restart</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, i2c.o(i.I2C_Restart))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+</UL>
+
+<P><STRONG><a name="[4c]"></a>I2C_Start</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, i2c.o(i.I2C_Start))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRegister
+</UL>
+
+<P><STRONG><a name="[43]"></a>readY</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, mpu.o(i.readY))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = readY &rArr; read
+</UL>
+<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TPM0_IRQHandler
+</UL>
+
+<P><STRONG><a name="[52]"></a>I2C_Stop</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, i2c.o(i.I2C_Stop))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRegister
+</UL>
+
+<P><STRONG><a name="[4d]"></a>I2C_WriteByte</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, i2c.o(i.I2C_WriteByte))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRegister
 </UL>
 
 <P><STRONG><a name="[2b]"></a>SystemInit</STRONG> (Thumb, 180 bytes, Stack size 0 bytes, system_mkl46z4.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
 </UL>
-<P><STRONG><a name="[1c]"></a>TPM0_IRQHandler</STRONG> (Thumb, 182 bytes, Stack size 8 bytes, tpm.o(i.TPM0_IRQHandler))
+<P><STRONG><a name="[1c]"></a>TPM0_IRQHandler</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, tpm.o(i.TPM0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = TPM0_IRQHandler &rArr; slcdDisplay &rArr; slcdSet &rArr; slcdErr &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDots
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDisplay
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_mc
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDisplay
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readY
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_mc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
 </UL>
-<P><STRONG><a name="[49]"></a>UART0_init</STRONG> (Thumb, 160 bytes, Stack size 0 bytes, uart0.o(i.UART0_init))
-<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[53]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, slcd.o(i.__ARM_common_switch8))
+<P><STRONG><a name="[57]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, slcd.o(i.__ARM_common_switch8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdSet
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdErr
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdSet
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdErr
 </UL>
 
-<P><STRONG><a name="[4f]"></a>adcCalibrate</STRONG> (Thumb, 174 bytes, Stack size 0 bytes, adc.o(i.adcCalibrate))
-<BR><BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcInitialize
-</UL>
-
-<P><STRONG><a name="[48]"></a>adcInitialize</STRONG> (Thumb, 94 bytes, Stack size 4 bytes, adc.o(i.adcInitialize))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = adcInitialize
-</UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcCalibrate
-</UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[4d]"></a>delay_mc</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, slcd.o(i.delay_mc))
+<P><STRONG><a name="[46]"></a>delay_mc</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, extra.o(i.delay_mc))
 <BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TPM0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[4b]"></a>slcdDisplay</STRONG> (Thumb, 466 bytes, Stack size 40 bytes, slcd.o(i.slcdDisplay))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = slcdDisplay &rArr; slcdSet &rArr; slcdErr &rArr; __ARM_common_switch8
+<P><STRONG><a name="[3a]"></a>main</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = main &rArr; tpmInitialize &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdSet
+<BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tpmInitialize
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdInitialize
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRegister
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TPM0_IRQHandler
-</UL>
-
-<P><STRONG><a name="[4c]"></a>slcdDots</STRONG> (Thumb, 78 bytes, Stack size 12 bytes, slcd.o(i.slcdDots))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = slcdDots &rArr; slcdSet &rArr; slcdErr &rArr; __ARM_common_switch8
-</UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdSet
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TPM0_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[52]"></a>slcdErr</STRONG> (Thumb, 190 bytes, Stack size 4 bytes, slcd.o(i.slcdErr))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = slcdErr &rArr; __ARM_common_switch8
+<P><STRONG><a name="[44]"></a>read</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, mpu.o(i.read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendNACK
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendACK
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Stop
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Start
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Restart
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ReadByte
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Enable
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Disable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdSet
-</UL>
-
-<P><STRONG><a name="[46]"></a>slcdInitialize</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, slcd.o(i.slcdInitialize))
-<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[51]"></a>slcdSet</STRONG> (Thumb, 540 bytes, Stack size 12 bytes, slcd.o(i.slcdSet))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = slcdSet &rArr; slcdErr &rArr; __ARM_common_switch8
-</UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdErr
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDots
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDisplay
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readY
 </UL>
 
-<P><STRONG><a name="[47]"></a>tpmInitialize</STRONG> (Thumb, 238 bytes, Stack size 8 bytes, tpm.o(i.tpmInitialize))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = tpmInitialize &rArr; __NVIC_SetPriority
+<P><STRONG><a name="[4f]"></a>sendACK</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, i2c.o(i.sendACK))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+
+<P><STRONG><a name="[51]"></a>sendNACK</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, i2c.o(i.sendNACK))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+</UL>
+
+<P><STRONG><a name="[4a]"></a>setRegister</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, mpu.o(i.setRegister))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = setRegister
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Stop
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Start
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Enable
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Disable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8a]"></a>__aeabi_fadd</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub.o(x$fpl$fadd), UNUSED)
-
-<P><STRONG><a name="[55]"></a>_fadd</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, faddsub.o(x$fpl$fadd), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fsub1
+<P><STRONG><a name="[45]"></a>slcdDisplay</STRONG> (Thumb, 466 bytes, Stack size 40 bytes, slcd.o(i.slcdDisplay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = slcdDisplay &rArr; slcdSet &rArr; slcdErr &rArr; __ARM_common_switch8
 </UL>
-
-<P><STRONG><a name="[4e]"></a>__aeabi_fsub</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub.o(x$fpl$fsub))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fsub
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TPM0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[57]"></a>_fsub</STRONG> (Thumb, 204 bytes, Stack size 16 bytes, faddsub.o(x$fpl$fsub), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fadd1
+<P><STRONG><a name="[56]"></a>slcdErr</STRONG> (Thumb, 190 bytes, Stack size 4 bytes, slcd.o(i.slcdErr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = slcdErr &rArr; __ARM_common_switch8
+</UL>
+<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+</UL>
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdSet
+</UL>
+
+<P><STRONG><a name="[47]"></a>slcdInitialize</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, slcd.o(i.slcdInitialize))
+<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[55]"></a>slcdSet</STRONG> (Thumb, 540 bytes, Stack size 12 bytes, slcd.o(i.slcdSet))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = slcdSet &rArr; slcdErr &rArr; __ARM_common_switch8
+</UL>
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdErr
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+</UL>
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slcdDisplay
+</UL>
+
+<P><STRONG><a name="[48]"></a>tpmInitialize</STRONG> (Thumb, 198 bytes, Stack size 8 bytes, tpm.o(i.tpmInitialize))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = tpmInitialize &rArr; __NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[54]"></a>__NVIC_SetPriority</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, tpm.o(i.__NVIC_SetPriority))
+<P><STRONG><a name="[58]"></a>__NVIC_SetPriority</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, tpm.o(i.__NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tpmInitialize
-</UL>
-
-<P><STRONG><a name="[58]"></a>_fadd1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, faddsub.o(x$fpl$fadd), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fsub
-</UL>
-
-<P><STRONG><a name="[56]"></a>_fsub1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, faddsub.o(x$fpl$fsub), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fadd
+<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tpmInitialize
 </UL>
 <P>
 <H3>
 Undefined Global Symbols
 </H3>
-<P><STRONG><a name="[44]"></a>_call_atexit_fns</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[41]"></a>_call_atexit_fns</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 <HR></body></html>
