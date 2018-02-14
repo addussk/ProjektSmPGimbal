@@ -386,16 +386,6 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\adc.c</FilePath>
-            </File>
-            <File>
-              <FileName>adc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\adc.h</FilePath>
-            </File>
-            <File>
               <FileName>tpm.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\tpm.c</FilePath>
@@ -414,6 +404,26 @@
               <FileName>slcd.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\slcd.h</FilePath>
+            </File>
+            <File>
+              <FileName>mpu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>leds.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\leds.c</FilePath>
+            </File>
+            <File>
+              <FileName>extra.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\extra.c</FilePath>
             </File>
             <File>
               <FileName>uart0.c</FileName>

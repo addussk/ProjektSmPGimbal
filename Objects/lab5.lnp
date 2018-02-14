@@ -1,8 +1,11 @@
 --cpu Cortex-M0+
 ".\objects\main.o"
-".\objects\adc.o"
 ".\objects\tpm.o"
 ".\objects\slcd.o"
+".\objects\mpu.o"
+".\objects\i2c.o"
+".\objects\leds.o"
+".\objects\extra.o"
 ".\objects\uart0.o"
 ".\objects\startup_mkl46z4.o"
 ".\objects\system_mkl46z4.o"
