@@ -7,3 +7,4 @@
 .\objects\slcd.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.1\CMSIS\Include\cmsis_compiler.h
 .\objects\slcd.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.1\CMSIS\Include\cmsis_armcc.h
 .\objects\slcd.o: C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.13.0\Device\Include\system_MKL46Z4.h
+.\objects\slcd.o: extra.h

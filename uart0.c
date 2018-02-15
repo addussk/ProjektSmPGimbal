@@ -22,10 +22,16 @@ void UART0_init(void){
 	UART0->BDH &= ~(UART_BDH_SBNS_MASK);
 	//ramka 8-bit, brak sprzetowego sprawdzania parzystosci
 	UART0->C1 &= ~(UART_C1_M_MASK | UART_C1_PE_MASK);
-	// przerwania
+	// interrupt ENABLE
 	UART0->C2 |= UART_C2_TIE_MASK | UART_C2_RIE_MASK;
 	//wlaczyc nadajnik i odbiornik
 	UART0->C2 |= (UART0_C2_TE_MASK | UART0_C2_RE_MASK);
+	
+	/*
+  NVIC_SetPriority(UART0_IRQn,1);
+	NVIC_ClearPendingIRQ(UART0_IRQn);
+	NVIC_EnableIRQ(UART0_IRQn);
+	*/
 }
 
 void UART0_transmitter(uint8_t data){
