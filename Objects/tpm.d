@@ -13,3 +13,4 @@
 .\objects\tpm.o: mpu.h
 .\objects\tpm.o: uart0.h
 .\objects\tpm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\tpm.o: filter.h

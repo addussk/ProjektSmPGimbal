@@ -5,6 +5,7 @@
 #include "i2c.h"
 #include "mpu.h"
 #include "uart0.h"
+#include "filter.h"
 
 static int value=0;
 static int value_uart=0;
@@ -42,13 +43,22 @@ void tpmInitialize(){
 }
 void TPM0_IRQHandler(){
 	
+	// Sprawdza flage od wyslana ACK w i2c
 	while((I2C1->S & I2C_S_RXAK_MASK));
 	
-		value = readY()/16;
+	/*
+	// filtr ale cos nie bangla 
+	if(i<=10){
+		
+		queue[i] = readY()/16;
+		
+		if(i==10){
+			
+		value = avarage(queue, 5);
 		slcdDisplay(value,1);
 		delay_mc(100);
-	
-	char value_vizualization[]="xxxx\n";
+			
+			char value_vizualization[]="xxxx\n";
 	
 		value_vizualization[3] = value/1000 + '0';
 		value_vizualization[2] = (value -(value_vizualization[3]*1000))/100 + '0';
@@ -61,5 +71,36 @@ void TPM0_IRQHandler(){
 	TPM0->STATUS &= ~TPM_STATUS_CH0F_MASK;
 	
 		TPM0->CONTROLS[3].CnV = value;
-		TPM0->CONTROLS[4].CnV = 4060-value;		
+		TPM0->CONTROLS[4].CnV = 4060-value;	
+			i=0;
+		}
+	}
+	*/
+		// odczytuje wartosc z interesujacej nas osii wyrzuca na lcd
+		value = readY()/16;
+		slcdDisplay(value,1);
+		delay_mc(100);
+	
+	// dane wysylane na uart
+	char value_vizualization[]="xxxx\n";
+	uint8_t intermediate_value[4];
+	
+		intermediate_value[3] = value/1000;
+		intermediate_value[2] = (value -(intermediate_value[3]*1000))/100;
+		intermediate_value[1] = (value -(intermediate_value[3]*1000)-(intermediate_value[2]*100))/10;
+		intermediate_value[0] = (value -(intermediate_value[3]*1000)-(intermediate_value[2]*100)-(intermediate_value[1]*10));
+
+		value_vizualization[3]=intermediate_value[0] + '0';
+		value_vizualization[2]=intermediate_value[1] + '0';
+		value_vizualization[1]=intermediate_value[2] + '0';
+		value_vizualization[0]=intermediate_value[3] + '0';
+	
+	send_String(value_vizualization);
+		
+	// czysci flage przerwania od tpm kanal 0 CH 0 F
+	TPM0->STATUS &= ~TPM_STATUS_CH0F_MASK;
+		// kontroluje pwm dla silniczkow na wyjsciach a6 i a7 kanal 3 i 4
+		TPM0->CONTROLS[3].CnV = value;
+		TPM0->CONTROLS[4].CnV = 4060-value;	
+
 }

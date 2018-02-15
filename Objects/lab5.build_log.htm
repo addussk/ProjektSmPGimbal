@@ -22,12 +22,30 @@ Dialog DLL:      TARMCM1.DLL V1.13.0.0
  
 <h2>Project:</h2>
 C:\Users\huuub\Desktop\AGH\Semestr 5\SMP_2\ProjektSmPGimbal\lab5.uvprojx
-Project File Date:  02/14/2018
+Project File Date:  02/15/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'CMSIS_DAP'
-".\Objects\lab5.axf" - 0 Error(s), 0 Warning(s).
+compiling tpm.c...
+mpu.h(31): warning:  #1295-D: Deprecated declaration readZ - give arg types
+  uint16_t readZ();
+mpu.h(32): warning:  #1295-D: Deprecated declaration readX - give arg types
+  uint16_t readX();
+mpu.h(34): warning:  #1295-D: Deprecated declaration readBytes - give arg types
+  void  readBytes();
+filter.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+tpm.c(80): warning:  #223-D: function "readY" declared implicitly
+  		value = readY()/16;
+tpm.c(106): warning:  #1-D: last line of file ends without a newline
+  }
+tpm.c(11): warning:  #177-D: variable "value_uart"  was declared but never referenced
+  static int value_uart=0;
+tpm.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=3720 RO-data=232 RW-data=8 ZI-data=352  
+".\Objects\lab5.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +73,7 @@ Package Vendor: Keil
       Source file:   Device\Source\system_MKL46Z4.c
 
    * Component: ARM::CMSIS:CORE:5.0.2
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

@@ -12,7 +12,7 @@ int main (void) {
 	slcdInitialize();
 	tpmInitialize();
 	UART0_init();
-		
+
 	I2C_Init(I2C1);
 	setRegister(0x6b,0x81);
 	
